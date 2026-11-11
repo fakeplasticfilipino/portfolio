@@ -65,8 +65,10 @@ main > section:last-child { padding-bottom: var(--section-gap-s); }
 .tile--side { grid-column: span 4; justify-content: space-between; }
 .tile--third { grid-column: span 4; }
 .tile--cert { padding: 0; overflow: hidden; gap: 0; justify-content: flex-start; }
+.tile--cert [data-slot] > img { object-position: center top; }
 .tile--cert [data-slot] { aspect-ratio: 790 / 610; border-width: 0; border-radius: 0; border-bottom: var(--rule-bar) solid var(--color-rule); }
 .tile--cert figcaption, .tile--cert .tile__cap { padding: var(--space-lg); font-size: var(--text-sm); color: var(--color-ink-2); }
+.tile__text { display: flex; flex-direction: column; gap: var(--space-sm); padding: var(--space-lg) var(--space-xl) var(--space-xl); }
 .figure { font-family: var(--font-outlier); font-weight: 700; font-size: max(2.5rem, var(--text-display-s)); line-height: 1; font-variant-numeric: tabular-nums; }
 .figure--ember { color: var(--color-accent); }
 .figure--acid { color: var(--color-accent-2); }
