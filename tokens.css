@@ -20,3 +20,12 @@
   --shadow-card: 6px 6px 0 var(--color-accent-2);
   --tracking-display: 0; --display-weight: 400;
 }
+[data-mode="light"] {
+  color-scheme: light;
+  --color-paper: oklch(96.5% 0.014 312); --color-paper-2: oklch(93% 0.02 312); --color-paper-3: oklch(89% 0.024 312);
+  --color-ink: oklch(20% 0.045 312); --color-ink-2: oklch(31% 0.045 312); --color-muted: oklch(44% 0.04 312);
+  --color-rule: oklch(80% 0.035 312);
+  --color-accent: oklch(63% 0.215 40); --color-accent-2: oklch(53% 0.15 115); --color-accent-ink: oklch(14% 0.04 312);
+  --color-focus: oklch(46% 0.2 265);
+  --color-shade: oklch(30% 0.02 315);
+}

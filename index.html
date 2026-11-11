@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Chivo:wght@400;700;900&family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js");try{if(localStorage.getItem("mode")==="light")document.documentElement.dataset.mode="light"}catch(e){}</script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,6 +17,7 @@
 <header class="nav">
   <div class="container nav__in">
     <a class="wordmark" href="#top">Chauncy Castro</a>
+    <div class="nav__end">
     <nav aria-label="Main">
       <ul>
         <li><a class="link" href="#work">Work</a></li>
@@ -25,13 +27,15 @@
         <li><a class="link" href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <button class="mode" type="button" data-mode-toggle>Light mode</button>
+    </div>
   </div>
 </header>
 
 <main id="main">
   <section class="hero" id="top">
     <div class="container hero__grid">
-      <div>
+      <div data-reveal>
         <h1>I build games and web tools</h1>
         <p class="lead">BSIT student in Imus looking for a software developer internship.</p>
         <div class="actions">
@@ -39,7 +43,7 @@
           <a class="btn btn--quiet" href="Castro_Chauncy_Resume.pdf" download>Download resume</a>
         </div>
       </div>
-      <figure class="shot">
+      <figure class="shot" data-reveal style="--i:1">
         <div data-slot="hero" data-kind="product" data-alt="The Coco Loco title screen with its beach background and menu">
           <img src="images/coco-loco.png" width="1440" height="810" alt="Coco Loco title screen: a beach with palm leaves, the game logo, and a menu with Play, Missions, Shop and Settings" fetchpriority="high">
         </div>
@@ -50,12 +54,12 @@
 
   <section class="section--tall" id="work" aria-labelledby="work-h">
     <div class="container">
-      <div class="head">
+      <div class="head" data-reveal>
         <h2 id="work-h">Projects I led</h2>
         <p class="lead">Two games and a set of table tools.</p>
       </div>
       <div class="bento">
-        <article class="tile tile--lead">
+        <article class="tile tile--lead" data-reveal style="--i:0">
           <div data-slot="macario" data-kind="product" data-alt="The MACARIO title screen with a colonial house and the chapter menu">
             <img src="images/macario.png" width="1440" height="900" alt="MACARIO title screen: a Spanish colonial house, the game logo and a menu in Filipino" loading="lazy">
           </div>
@@ -69,9 +73,9 @@
             </div>
           </div>
         </article>
-        <article class="tile tile--side">
+        <article class="tile tile--side" data-reveal style="--i:1">
           <div>
-            <p class="figure figure--ember">19</p>
+            <p class="figure figure--ember" data-count>19</p>
             <p class="unit">C# scripts</p>
           </div>
           <div>
@@ -79,9 +83,9 @@
             <p>An arcade dodge game in Unity 6 and C#, with a shop, missions and difficulty that grows the longer you survive. I managed it and wrote all the code. Windows build.</p>
           </div>
         </article>
-        <article class="tile tile--third tile--acid">
+        <article class="tile tile--third tile--acid" data-reveal style="--i:2">
           <div>
-            <p class="figure figure--acid">198</p>
+            <p class="figure figure--acid" data-count>198</p>
             <p class="unit">commits</p>
           </div>
           <div>
@@ -89,15 +93,15 @@
             <p>Browser tools in JavaScript, including a character sheet with optional accounts and a combat generator.</p>
           </div>
         </article>
-        <article class="tile tile--third tile--cert">
+        <article class="tile tile--third tile--cert" data-reveal style="--i:3">
           <div data-slot="cert" data-kind="product" data-alt="Oracle Academy award of course completion for Java Fundamentals">
             <img src="images/oracle-java-fundamentals.png" width="790" height="610" alt="Oracle Academy Award of Course Completion for Java Fundamentals, presented to Chauncy John Castro on 19 June 2024" loading="lazy">
           </div>
           <p class="tile__cap">Java Fundamentals, Oracle Academy, June 2024.</p>
         </article>
-        <article class="tile tile--third tile--ember">
+        <article class="tile tile--third tile--ember" data-reveal style="--i:4">
           <div>
-            <p class="figure figure--ember">363</p>
+            <p class="figure figure--ember" data-count>363</p>
             <p class="unit">commits</p>
           </div>
           <p>In the MACARIO repository, covering the game, the teacher dashboard and the database.</p>
@@ -108,12 +112,12 @@
 
   <section class="section" id="experience" aria-labelledby="exp-h">
     <div class="container">
-      <div class="head">
+      <div class="head" data-reveal>
         <h2 id="exp-h">Experience and education</h2>
         <p class="lead">Work, training and school, newest first.</p>
       </div>
       <ol class="rows">
-        <li class="row">
+        <li class="row" data-reveal style="--i:0">
           <p class="year">2027</p>
           <div>
             <h3>BS Information Technology</h3>
@@ -121,7 +125,7 @@
           </div>
           <p>Fourth-year student. Expected graduation in July 2027.</p>
         </li>
-        <li class="row" aria-current="true">
+        <li class="row" aria-current="true" data-reveal style="--i:1">
           <p class="year">2022</p>
           <div>
             <h3>OJT trainee</h3>
@@ -129,7 +133,7 @@
           </div>
           <p>Designed event posters in Canva, prepared documents and promoted the new PS5 at Mall of Asia events. 60 hours.</p>
         </li>
-        <li class="row">
+        <li class="row" data-reveal style="--i:2">
           <p class="year">2022</p>
           <div>
             <h3>Senior high school, ICT strand</h3>
@@ -137,7 +141,7 @@
           </div>
           <p>Information and communications technology track.</p>
         </li>
-        <li class="row">
+        <li class="row" data-reveal style="--i:3">
           <p class="year">2021</p>
           <div>
             <h3>Meat processor</h3>
@@ -151,11 +155,11 @@
 
   <section class="section--tall" id="skills" aria-labelledby="skills-h">
     <div class="container">
-      <div class="head">
+      <div class="head" data-reveal>
         <h2 id="skills-h">Skills</h2>
         <p class="lead">What I use, and how I work.</p>
       </div>
-      <div class="table-wrap">
+      <div class="table-wrap" data-reveal>
         <table>
           <tbody>
             <tr><th scope="row">Programming</th><td>C#, JavaScript, Java (fundamentals), HTML, CSS</td></tr>
@@ -170,7 +174,7 @@
 
   <section class="section" id="resume" aria-labelledby="resume-h">
     <div class="container split">
-      <div class="split__text">
+      <div class="split__text" data-reveal>
         <h2 id="resume-h">My resume, on one page</h2>
         <p class="lead">Made for applicant tracking systems and for people.</p>
         <ul class="facts">
@@ -181,7 +185,7 @@
           <a class="btn btn--quiet" href="Castro_Chauncy_Resume.pdf" download>Download resume</a>
         </div>
       </div>
-      <figure class="shot">
+      <figure class="shot" data-reveal style="--i:1">
         <div data-slot="resume" data-kind="product" data-alt="The one page resume of Chauncy John F. Castro">
           <img src="images/resume-preview.png" width="1820" height="2574" alt="Preview of Chauncy Castro's one page resume" loading="lazy">
         </div>
@@ -205,5 +209,36 @@
 
 <script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
 document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+<script>
+(function () {
+  var root = document.documentElement, btn = document.querySelector('[data-mode-toggle]');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function sync() { btn.textContent = root.dataset.mode === 'light' ? 'Dark mode' : 'Light mode'; }
+  btn.addEventListener('click', function () {
+    var next = root.dataset.mode === 'light' ? 'dark' : 'light';
+    if (next === 'light') root.dataset.mode = 'light'; else delete root.dataset.mode;
+    try { localStorage.setItem('mode', next); } catch (e) {}
+    sync();
+  });
+  sync();
+  function count(el) {
+    var end = parseInt(el.textContent, 10), t0 = null;
+    if (reduce || !end) return;
+    function step(t) { if (t0 === null) t0 = t; var p = Math.min((t - t0) / 800, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); }
+    el.textContent = '0'; requestAnimationFrame(step);
+  }
+  if ('IntersectionObserver' in window) {
+    var fired = false;
+    setTimeout(function () { if (!fired) document.querySelectorAll('[data-reveal]').forEach(function (el) { el.classList.add('is-in'); }); }, 2500);
+    var io = new IntersectionObserver(function (es) { fired = true; es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); e.target.querySelectorAll('[data-count]').forEach(count); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -10% 0px' });
+    document.querySelectorAll('[data-reveal]').forEach(function (el) { io.observe(el); });
+    var links = {}; document.querySelectorAll('.nav li a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+    var spy = new IntersectionObserver(function (es) { es.forEach(function (e) { var a = links[e.target.id]; if (!a) return; if (e.isIntersecting) { Object.keys(links).forEach(function (k) { links[k].removeAttribute('aria-current'); }); a.setAttribute('aria-current', 'true'); } }); }, { rootMargin: '-40% 0px -55% 0px' });
+    ['work', 'experience', 'skills', 'resume', 'contact'].forEach(function (id) { var s = document.getElementById(id); if (s) spy.observe(s); });
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach(function (el) { el.classList.add('is-in'); });
+  }
+})();
+</script>
 </body>
 </html>

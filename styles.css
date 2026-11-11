@@ -1,7 +1,8 @@
 /* Hallmark · shape: Bento Grid · genre: playful · theme: Arcade (deal 2/3, seed dark-game-developer-portfolio-1d57·f392aa9e·2026-11-11·r0) · job: hire · draw: 1fc44a
  * hero: Stage · nav: edge-aligned · footer: statement · imagery: screenshots 3 (own capture and supplied) and one certificate scan · signature: the real Coco Loco title screen on the first screen · arcade: ember/grille
- * axes: dark/pixel/chromatic-ember · posture: full-palette · contrast: pass · fold: pass · v2.0.0 */
+ * axes: dark/pixel/chromatic-ember · posture: full-palette · modes: dark+light · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V3 · weakest: V, only one Coco Loco picture exists so its tile is set in type; the hero shows the real screen instead of a stand-in */
+/* Hallmark · answered F4 · the second hero button is transparent with an ink border, an outlined quiet style, so only See the work is filled */
 @import url("./tokens.css");
 @import url("./base.css");
 
@@ -24,7 +25,7 @@
 .nav { border-bottom: var(--rule-hair) solid var(--color-rule); }
 .nav__in { display: flex; align-items: center; justify-content: space-between; gap: var(--space-lg); min-height: 72px; }
 .wordmark { font-family: var(--font-display); font-size: var(--text-lg); line-height: 1.02; text-transform: uppercase; text-decoration: none; white-space: nowrap; }
-.nav ul { display: flex; gap: var(--space-xl); margin: 0; padding: 0; list-style: none; }
+.nav ul { display: flex; gap: var(--space-lg); margin: 0; padding: 0; list-style: none; }
 .nav li a { font-size: var(--text-md); }
 @media (max-width: 48rem) { .nav ul { gap: var(--space-md); } .nav li:not(:first-child):not(:last-child) { display: none; } }
 
@@ -108,3 +109,21 @@ td { font-size: var(--text-lg); color: var(--color-ink-2); }
 .foot__links { display: flex; flex-wrap: wrap; gap: var(--space-md) var(--space-xl); margin: var(--space-xl) 0 0; padding: 0; list-style: none; font-size: var(--text-lg); }
 .foot__place { margin-top: var(--space-md); color: var(--color-ink-2); }
 .colophon { margin-top: var(--space-3xl); padding-top: var(--space-md); border-top: var(--rule-hair) solid var(--color-rule); font-size: var(--text-sm); color: var(--color-muted); }
+
+/* mode toggle */
+.mode { min-height: 44px; padding: 0 var(--space-md); border: var(--rule-bar) solid var(--color-rule); border-radius: var(--radius-card); background: transparent; color: var(--color-ink); font: 700 var(--text-sm)/1 var(--font-body); white-space: nowrap; cursor: pointer; transition: border-color var(--dur-micro) var(--ease-out), translate var(--dur-micro) var(--ease-out); }
+.mode:hover { border-color: var(--color-ink); }
+.mode:active { translate: 0 1px; }
+.mode:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.mode:disabled { opacity: 0.55; cursor: not-allowed; }
+.nav__end { display: flex; align-items: center; gap: var(--space-xl); }
+.nav li a { padding: var(--space-2xs) var(--space-xs); }
+.nav li a[aria-current="true"] { background: var(--color-accent); color: var(--color-accent-ink); text-decoration-color: transparent; }
+@media (max-width: 40rem) { .nav__end { gap: var(--space-sm); } .wordmark { font-size: var(--text-md); } .nav li:not(:last-child) { display: none; } }
+@media (prefers-reduced-motion: reduce) { .mode { transition: none; } }
+
+/* one reveal, visible without script */
+html { scroll-behavior: smooth; }
+.js [data-reveal] { opacity: 0; transform: translateY(12px); transition: opacity var(--dur-long) var(--ease-out), transform var(--dur-long) var(--ease-out); transition-delay: calc(var(--i, 0) * 70ms); }
+.js [data-reveal].is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .js [data-reveal] { opacity: 1; transform: none; transition: none; } }
